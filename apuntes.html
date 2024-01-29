@@ -74,6 +74,79 @@
             El comando "file" proporciona información sobre el tipo de elemento seleccionado en una carpeta, como si es
             un directorio o un enlace simbólico.</p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 4 - Manipulando archivos y directorios</h3>
+        <p> Después de aprender a navegar y listar contenidos en la terminal, es crucial aprender a manipular archivos
+            con comandos básicos en Linux.<br><br>
+
+            1. <b>Crear un directorio (mkdir):</b><br>
+            - El comando "mkdir" (Make Directory) se utiliza para crear un directorio. Simplemente escribe el nombre del
+            directorio que deseas crear, y puedes crear varios directorios al mismo tiempo.<br><br>
+
+            mkdir DirectorioInteresante<br><br>
+
+
+            2. <b>Crear archivos (touch):</b><br>
+            - El comando "touch" se utiliza para crear archivos. Simplemente escribe el nombre de los archivos que
+            deseas generar delante del comando.<br><br>
+
+            touch Secreto1 Secreto2 SecretoSecretario<br><br>
+
+
+            3. <b>Copiar archivos (cp):</b><br>
+            - El comando "cp" (Copy) se utiliza para copiar archivos. Especifica el nombre del archivo que deseas copiar
+            y el nombre con el que quieres que se guarde la copia.<br><br>
+
+            cp Secreto1 Secreto_bk<br><br>
+
+
+            4. <b>Mover un directorio (mv):</b><br>
+            - El comando "mv" (Move) se utiliza para mover archivos o directorios. Especifica el nombre del archivo que
+            deseas mover y la ubicación a la que se moverá.<br><br>
+
+
+            mv SecretoQueSeHizoPublico ../SecretosPublicos/<br><br>
+
+
+            5. <b>Eliminar archivos (rm):</b><br>
+            - El comando "rm" (Remove) se utiliza para eliminar archivos o carpetas. Simplemente escribe el nombre o la
+            ruta del elemento que deseas eliminar.<br><br>
+
+
+            rm SecretoQueNadieDebeVer<br><br>
+
+
+            - Opciones útiles de "rm":<br>
+            - `-i` (interactive): Pregunta si estás seguro de eliminar el archivo.<br>
+            - `-r` (recursive): Elimina todo lo que está dentro de una carpeta.<br>
+            - `-f` (force): Fuerza la eliminación sin preguntar.<br><br>
+
+            <br>
+            rm -i SecretoConfidencial<br>
+            rm -r CarpetaConArchivos<br>
+            rm -f ArchivoEnUso<br><br>
+            <br><br>
+            <b>Comandos</b>
+            mkdir [nombre_directorio]: crea un directorio también puedes añadir la ruta<br><br>
+
+                touch: crea un archivo, si no indicas la extension por defecto sera .txt<br><br>
+
+                cp [archivo]<br>
+                [ruta]: nos permite duplicar archivos, para duplicar directorios con su contenido añadir el
+                modificador -r que indica recursividad<br><br>
+
+                mv [archivo]<br>
+                [ruta] : mover un archivo hacia un directorio. También se usa para renombrar archivos mv
+                [archivo]
+                [nuevo nombre] no olvidar la extension del archivo Para mover directorios añadir el
+                modificador -r<br><br>
+
+                rm: elimina archivos, con -i indica un mensaje de confirmación en consola para
+                tener mas control sobre la elección de que archivos queremos eliminar. Para
+                eliminar un directorio añadir -r y -ri para usar el mensaje de confirmación
+        </p>
+
+    </div>
 </body>
 
 </html>
