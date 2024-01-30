@@ -129,23 +129,57 @@
             <b>Comandos</b>
             mkdir [nombre_directorio]: crea un directorio también puedes añadir la ruta<br><br>
 
-                touch: crea un archivo, si no indicas la extension por defecto sera .txt<br><br>
+            touch: crea un archivo, si no indicas la extension por defecto sera .txt<br><br>
 
-                cp [archivo]<br>
-                [ruta]: nos permite duplicar archivos, para duplicar directorios con su contenido añadir el
-                modificador -r que indica recursividad<br><br>
+            cp [archivo]<br>
+            [ruta]: nos permite duplicar archivos, para duplicar directorios con su contenido añadir el
+            modificador -r que indica recursividad<br><br>
 
-                mv [archivo]<br>
-                [ruta] : mover un archivo hacia un directorio. También se usa para renombrar archivos mv
-                [archivo]
-                [nuevo nombre] no olvidar la extension del archivo Para mover directorios añadir el
-                modificador -r<br><br>
+            mv [archivo]<br>
+            [ruta] : mover un archivo hacia un directorio. También se usa para renombrar archivos mv
+            [archivo]
+            [nuevo nombre] no olvidar la extension del archivo Para mover directorios añadir el
+            modificador -r<br><br>
 
-                rm: elimina archivos, con -i indica un mensaje de confirmación en consola para
-                tener mas control sobre la elección de que archivos queremos eliminar. Para
-                eliminar un directorio añadir -r y -ri para usar el mensaje de confirmación
+            rm: elimina archivos, con -i indica un mensaje de confirmación en consola para
+            tener mas control sobre la elección de que archivos queremos eliminar. Para
+            eliminar un directorio añadir -r y -ri para usar el mensaje de confirmación
         </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 5 - Explorando el contenido de nuestros archivos</h3>
+        <p>
+            1. <b>Comandos Head y Tail:</b><br>
+            - Head imprime las primeras 10 líneas de un archivo, y tail imprime las últimas 10 líneas.<br>
+            - Sintaxis simple: `head archivo.txt` o `tail archivo.txt`.<br>
+            - Opción -n para especificar el número de líneas, por ejemplo: `head proyecto.html -n 20`.<br><br>
 
+            2. <b>Comando Less:</b><br>
+            - Permite ver todo el contenido de un archivo y navegar por él.<br>
+            - Sintaxis: `less [nombreDelArchivoParaAbrir]`.<br>
+            - Interfaz gráfica para inspeccionar el documento.<br>
+            - Uso de "/" para buscar palabras dentro del documento.<br>
+            - Para salir de la interfaz, presiona "q".<br><br>
+
+            3. <b>Comando xdg-open:</b><br>
+            - Abre un archivo en el programa predeterminado para su extensión.<br>
+            - Ejemplo: `xdg-open archivo.html`.<br>
+            - Puede requerir instalación con `sudo apt install xdg-utils` si no está disponible.<br>
+            - Se utiliza para abrir archivos y, al ejecutarse para un archivo `.html`, muestra una interfaz similar a
+            less.<br><br>
+
+            4. <b>Abrir una Carpeta con el Comando Nautilus:</b><br>
+            - El comando `nautilus` abre una carpeta utilizando el programa Nautilus.<br>
+            - Sintaxis: `nautilus carpeta`.<br>
+            - Similar a xdg-open pero específicamente para carpetas.<br><br>
+
+            5. <b>Manejo de Errores:</b><br>
+            - Si xdg-open no está instalado, seguir las instrucciones del mensaje de error para instalarlo.<br>
+            - Ejemplo de instalación: `sudo apt install xdg-utils`.<br>
+
+            En resumen, estos comandos permiten inspeccionar rápidamente el contenido de archivos, visualizar todo el
+            documento de manera interactiva, abrir archivos en programas predeterminados y explorar carpetas desde la
+            terminal.</p>
     </div>
 </body>
 
