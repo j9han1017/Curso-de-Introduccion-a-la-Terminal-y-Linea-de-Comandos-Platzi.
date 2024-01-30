@@ -197,13 +197,38 @@
         </p>
         <p><b>Ejemplos de comandos básicos de la terminal</b><br>
             Ahora conocerás varios tipos de comandos que puedes aplicar en el proyecto que estás realizando. <br><br>
-            
+
             - type [comando]: Nos permite conocer qué tipo de comando es 🤔. <br>
-            - alias l="[secuencia de comandos]": Nos permite crear comandos. Son temporales, se borran al cerrar la terminal 👶🏼.<br>
+            - alias l="[secuencia de comandos]": Nos permite crear comandos. Son temporales, se borran al cerrar la
+            terminal 👶🏼.<br>
             - help [comando]: Nos permite consultar un poco de documentación de un comando 📄.<br>
             - man [comando]: De manual, nos permite conocer mucha más información de un comando.<br>
             - info [comando]: Similar al anterior, pero un poco resumido y con otro formato.<br>
             - whatis [comando]: Describe un comando en una sola línea ☺️. No funciona con todos.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 7 - Wildcards</h3>
+        <p>Los wildcards o comodines son caracteres especiales que permiten realizar búsquedas más avanzadas
+            en la manipulación de archivos y directorios. Se pueden utilizar con comandos como `ls`, `mv`, `cp`, y `rm`.
+            Aquí hay un resumen de los tipos de wildcards mencionados: <br><br>
+
+            1.  <b>Asterisco (*) - Buscar todo:</b><br>
+            - `*`: Busca todos los archivos en una carpeta.<br>
+            - `*.png`: Busca archivos con la extensión ".png".<br>
+            - `fotoDe*`: Busca archivos que comiencen por "fotoDe".<br><br>
+
+            2. <b>Signo de interrogación (?) - Buscar por cantidad de caracteres: </b><br>
+            - `?`: Busca un solo carácter.<br>
+            - `foto?.png`: Busca archivos que sigan el patrón "fotoX.png" (donde X es un solo carácter).<br>
+            - `foto??.jpg`: Busca archivos que sigan el patrón "fotoXX.jpg" (donde XX son dos caracteres).<br><br>
+
+            3.<b>Corchetes [] - Buscar por caracteres específicos: </b><br>
+            - `[ci]`: Busca archivos que comiencen por "c" o "i".<br>
+            - `[cCiI]*`: Busca archivos que comiencen por "c", "C", "i" o "I".<br>
+            - `foto[2-6]*`: Busca archivos que comiencen por "foto" seguido de un número entre 2 y 6.<br><br>
+
+            Estos wildcards ofrecen flexibilidad para realizar búsquedas más precisas y son útiles en diversas
+            situaciones al manipular archivos en la línea de comandos.</p>
     </div>
 </body>
 
