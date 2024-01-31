@@ -212,7 +212,7 @@
             en la manipulación de archivos y directorios. Se pueden utilizar con comandos como `ls`, `mv`, `cp`, y `rm`.
             Aquí hay un resumen de los tipos de wildcards mencionados: <br><br>
 
-            1.  <b>Asterisco (*) - Buscar todo:</b><br>
+            1. <b>Asterisco (*) - Buscar todo:</b><br>
             - `*`: Busca todos los archivos en una carpeta.<br>
             - `*.png`: Busca archivos con la extensión ".png".<br>
             - `fotoDe*`: Busca archivos que comiencen por "fotoDe".<br><br>
@@ -229,6 +229,49 @@
 
             Estos wildcards ofrecen flexibilidad para realizar búsquedas más precisas y son útiles en diversas
             situaciones al manipular archivos en la línea de comandos.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 8 - Redirecciones: cómo funciona la shell</h3>
+        <p> El aprendizaje aborda el concepto de comandos y se centra en el manejo de entradas y salidas en la terminal
+            mediante redirecciones. Se destacan las definiciones de Standard Input (stdin) y Standard Output (stdout),
+            así como la introducción de file descriptors, especialmente el file descriptor 2 que representa Standard
+            Error. <br><br>
+
+            Se explican los operadores de redirección como > para enviar la salida estándar a un archivo y >> para
+            concatenar la salida al final de un archivo existente. Además, se presenta la redirección de errores con la
+            sintaxis 2>|2>&1, permitiendo dirigir el Standard Error hacia un archivo.  <br><br>
+
+            Se ilustran ejemplos prácticos, como guardar la salida de un comando en un archivo (ls -l > output.txt),
+            concatenar información (ls -l >> output.txt image.png), y redirigir errores (ls -l > output.txt 2>&1). Se
+            destaca la importancia de entender y controlar las entradas y salidas para optimizar el manejo de datos en
+            la línea de comandos. <br></p>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Operador</th>
+                    <th>Función</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>></td>
+                    <td>Redirecciona la salida. Por defecto redirecciona el Standar Output</td>
+                  </tr>
+                  <tr>
+                    <td>>></td>
+                    <td>Concatena la salida con lo que ya tenga el archivo a donde se está redirigiendo la salida</td>
+                  </tr>
+                  <tr>
+                    <td>2></td>
+                    <td>Redirecciona el file descriptor 2 (En este caso Standar Error)</td>
+                  </tr>
+                  <tr>
+                    <td>2>&amp;1</td>
+                    <td>Redirecciona el file descriptor 2 y 1</td>
+                  </tr>
+                </tbody>
+              </table>
+              
     </div>
 </body>
 
