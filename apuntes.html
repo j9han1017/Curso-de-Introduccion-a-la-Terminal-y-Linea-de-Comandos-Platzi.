@@ -449,6 +449,51 @@
 
             Practicar en la terminal o buscar información adicional puede ayudar a entender mejor este concepto.</p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 12 - Modificando permisos en la terminal</h3>
+        <p><b>Cambiar Permisos con chmod:</b><br><br>
+
+            Los permisos de archivos se pueden modificar con el comando chmod, utilizando símbolos o notación octal. <br>
+            Símbolos: u (dueño), g (grupo), o (otros).<br>
+            Operadores: + (añadir), - (quitar), = (asignar).<br>
+            Ejemplo: chmod g+w ProyectoExplosivo.txt agrega permiso de escritura al grupo.<br>
+            Gestionar Usuarios con whoami y su:<br><br>
+
+           <b> whoami: Muestra el usuario actual.</b><br><br>
+
+            su [usuario]: Cambia de usuario, por ejemplo, su root.<br>
+            Precaución al usar el superusuario root debido a sus amplios privilegios.<br><br>
+            
+            <b>Cambiar Propietario con chown:</b><br><br>
+
+            chown [nuevo_dueño] [archivo]: Cambia el propietario de un archivo.<br>
+            Ejemplo: chown usuario Archivo.txt.<br><br>
+
+
+            <b>Ejercicios de Práctica:</b><br>
+
+            Crear "ArchivoPoderoso.txt" y darle permisos r-xrwxr-xr-x.<br>
+            Crear "pelota.txt" como root, asignar permisos rwxr-x--x (notación octal: 711) y cambiar propietario al
+            usuario principal.<br>
+            Crear un archivo con permisos --------- (ningún permiso) utilizando notación simbólica.<br><br>
+            
+            <b>Restablecer Contraseña Root en WSL:</b><br><br>
+
+            Ejecutar wsl --user root en CMD y luego passwd root para cambiar la contraseña.<br><br>
+            <b>Comandos Importantes:</b><br><br>
+
+            whoami: Muestra el usuario actual.<br>
+            su: Cambia de usuario.<br>
+            chmod: Cambia los permisos de un archivo.<br>
+            chown: Cambia el propietario de un archivo.<br><br>
+            
+            <b>Advertencia:</b><br><br>
+            Usar root con precaución debido a sus amplios privilegios.<br>
+            Tener cuidado al manipular archivos y cambiar propietarios.<br><br>
+            
+            <b>Ejercicios Prácticos:</b><br><br>
+            Practicar con la creación de archivos, ajuste de permisos y cambio de propietario.</p>
+    </div>
 </body>
 
 </html>
