@@ -341,7 +341,7 @@
             - Permite ejecutar varios comandos en la misma línea, separándolos por el punto y coma.<br>
             - Ejemplo: `mkdir ProyectosSecretos; ls; date`<br><br>
 
-            2.  <b>Ampersand (&):</b><br>
+            2. <b>Ampersand (&):</b><br>
             - Facilita la ejecución eficiente de varios comandos simultáneamente.<br>
             - Ejemplo: `date & echo "Hola" & cal`<br><br>
 
@@ -360,56 +360,94 @@
 
             Estos operadores ofrecen flexibilidad y control en la ejecución de comandos, permitiendo la construcción de
             flujos condicionales y la ejecución concurrente de tareas en la terminal.</p>
-            <table>
-                <thead>
-                  <tr>
+        <table>
+            <thead>
+                <tr>
                     <th>Operador</th>
                     <th>Función</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
                     <td>;</td>
                     <td>Ejecuta de forma síncrona los comandos especificados</td>
-                  </tr>
-                  <tr>
+                </tr>
+                <tr>
                     <td>&amp;</td>
                     <td>Ejecuta de forma asíncrona los comandos especificados</td>
-                  </tr>
-                  <tr>
+                </tr>
+                <tr>
                     <td>&amp;&amp;</td>
                     <td>Ejecuta el comando si el anterior se ejecutó correctamente</td>
-                  </tr>
-                  <tr>
+                </tr>
+                <tr>
                     <td>\|\|</td>
-                    <td>Ejecuta el comando si el anterior o la combinación de los anteriores resultaron en verdadero</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              <table>
-                <thead>
-                  <tr>
+                    <td>Ejecuta el comando si el anterior o la combinación de los anteriores resultaron en verdadero
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
                     <th>Comando</th>
                     <th>Función</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
                     <td>echo</td>
                     <td>Imprime el mensaje que le indiques</td>
-                  </tr>
-                  <tr>
+                </tr>
+                <tr>
                     <td>cal</td>
                     <td>Imprime un calendario con la fecha actual</td>
-                  </tr>
-                  <tr>
+                </tr>
+                <tr>
                     <td>date</td>
                     <td>Imprime la fecha actual</td>
-                  </tr>
-                </tbody>
-              </table>
-              
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 11 - Cómo se manejan los permisos</h3>
+        <p>
+            Los permisos en un sistema operativo determinan las acciones que cada usuario puede realizar sobre archivos
+            y carpetas. Al listar archivos con "ls -l", la primera columna muestra los permisos. Los tipos de archivos
+            incluyen normales ("-"), directorios ("d"), enlaces simbólicos ("l"), y archivos de bloque ("b"). <br><br>
+
+            Los permisos de usuario se dividen en Owner (dueño), Group (grupo), y World (otros). Se representan con los
+            símbolos "r" (readable), "w" (writable), y "x" (executable). Los permisos se expresan en orden rwx, y un
+            guion indica que el permiso no está disponible.<br><br>
+
+            Ejercicio 1:<br>
+            Permiso: drwxr-xr-x<br>
+            Significado:<br>
+            - Tipo: Directorio<br>
+            - Dueño: Lectura, escritura y ejecución<br>
+            - Grupo: Lectura y ejecución<br>
+            - Otros: Lectura y ejecución<br><br>
+
+            Ejercicio 2:<br>
+            Permiso: -rw-r--r--<br>
+            Significado:<br>
+            - Tipo: Archivo normal<br>
+            - Dueño: Lectura y escritura<br>
+            - Grupo: Lectura<br>
+            - Otros: Lectura<br><br>
+
+            La representación numérica de permisos se organiza como rwx y se traduce a binario. Por ejemplo, r-x se
+            convierte en 5. Usando este método, rwxr-xr-- se traduce a 751.<br><br>
+
+            Ejercicios prácticos:<br>
+            1. Directorio: 711 (rwx--x--x)<br>
+            2. Enlace simbólico: 444 (r--r--r--)<br>
+            3. Archivo común: 766 (rwxrw-rw-)<br><br>
+
+            Practicar en la terminal o buscar información adicional puede ayudar a entender mejor este concepto.</p>
     </div>
 </body>
 
