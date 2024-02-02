@@ -570,6 +570,48 @@
             Estos comandos permiten una búsqueda efectiva y personalizable en la terminal para gestionar y eliminar
             archivos de manera eficiente.</p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 15 - Usando el comando grep</h3>
+        <p>
+            <b>Uso del comando `grep` para buscar texto dentro de archivos:</b><br><br>
+            
+            <b>Significado de "grep":</b><br>
+            - "Grep" proviene de "Global Regular Expression Print" y utiliza expresiones regulares (regex) para realizar búsquedas dentro de archivos.<br><br>
+            
+            <b>Sintaxis básica:</b><br>
+            - La sintaxis general es: `grep [ExpresiónRegular] [archivoDondeBuscar]`.<br><br>
+            
+            <b>Ejemplo práctico:</b><br>
+            - Si tenemos un archivo llamado "movies.csv", podemos buscar palabras dentro de él con el comando: `grep the movies.csv`.<br><br>
+            
+            <b>Opciones útiles:</b><br><br>
+            
+            1. <b>Ignorar case sensitive (-i):</b><br>
+               - La opción `-i` permite buscar sin distinguir entre mayúsculas y minúsculas. Ejemplo:<br><br>
+                 
+                 grep -i Action movies.csv<br><br>
+                
+            
+            2. <b>Contar ocurrencias (-c):</b><br>
+               - Utilizando `-c`, se puede obtener el conteo de cuántas veces aparece una palabra en el archivo. Ejemplo:<br><br>
+                
+                 grep -c Drama movies.csv<br><br>
+                 
+            
+            3. <b>Excluir una expresión (-v):</b><br>
+               - La opción `-v` permite mostrar resultados que NO coincidan con la expresión regular proporcionada. Ejemplo:<br><br>
+                 
+                 grep -cv Drama movies.csv<br><br>
+                
+            
+            4. <b>Limitar la búsqueda (-m):</b><br>
+               - Con `-m` se limita la búsqueda a un número específico de líneas. Ejemplo:<br><br>
+                 
+                 grep -m 10 Fan movies.csv<br><br>
+                 
+            
+            Estas opciones amplían la versatilidad del comando `grep`, facilitando la búsqueda y análisis de información dentro de archivos de texto.</p>
+    </div>
 </body>
 
 </html>
