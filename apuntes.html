@@ -453,17 +453,18 @@
         <h3 class="subtitulos">Clase 12 - Modificando permisos en la terminal</h3>
         <p><b>Cambiar Permisos con chmod:</b><br><br>
 
-            Los permisos de archivos se pueden modificar con el comando chmod, utilizando símbolos o notación octal. <br>
+            Los permisos de archivos se pueden modificar con el comando chmod, utilizando símbolos o notación octal.
+            <br>
             Símbolos: u (dueño), g (grupo), o (otros).<br>
             Operadores: + (añadir), - (quitar), = (asignar).<br>
             Ejemplo: chmod g+w ProyectoExplosivo.txt agrega permiso de escritura al grupo.<br>
             Gestionar Usuarios con whoami y su:<br><br>
 
-           <b> whoami: Muestra el usuario actual.</b><br><br>
+            <b> whoami: Muestra el usuario actual.</b><br><br>
 
             su [usuario]: Cambia de usuario, por ejemplo, su root.<br>
             Precaución al usar el superusuario root debido a sus amplios privilegios.<br><br>
-            
+
             <b>Cambiar Propietario con chown:</b><br><br>
 
             chown [nuevo_dueño] [archivo]: Cambia el propietario de un archivo.<br>
@@ -476,7 +477,7 @@
             Crear "pelota.txt" como root, asignar permisos rwxr-x--x (notación octal: 711) y cambiar propietario al
             usuario principal.<br>
             Crear un archivo con permisos --------- (ningún permiso) utilizando notación simbólica.<br><br>
-            
+
             <b>Restablecer Contraseña Root en WSL:</b><br><br>
 
             Ejecutar wsl --user root en CMD y luego passwd root para cambiar la contraseña.<br><br>
@@ -486,13 +487,88 @@
             su: Cambia de usuario.<br>
             chmod: Cambia los permisos de un archivo.<br>
             chown: Cambia el propietario de un archivo.<br><br>
-            
+
             <b>Advertencia:</b><br><br>
             Usar root con precaución debido a sus amplios privilegios.<br>
             Tener cuidado al manipular archivos y cambiar propietarios.<br><br>
-            
+
             <b>Ejercicios Prácticos:</b><br><br>
-            Practicar con la creación de archivos, ajuste de permisos y cambio de propietario.</p>
+            Practicar con la creación de archivos, ajuste de permisos y cambio de propietario.
+        </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 13 - Cómo configurar variables de entorno</h3>
+        <p>Las variables de entorno son útiles para priorizar cierta información o almacenar datos que no queremos
+            recordar constantemente. En Linux, existen varias variables de entorno preestablecidas, como HOME, PATH,
+            BASH_VERSION y SHELL, que se pueden ver desde la consola mediante comandos. <br><br>
+
+            Para crear variables de entorno personalizadas, se puede acceder al archivo oculto ".bashrc" en el
+            directorio de usuario. Se puede abrir con el comando "code .bashrc" (en VS Code) o editarlo directamente. Es
+            importante tener precaución al modificar este archivo para evitar dañar la shell.<br><br>
+
+            Se sugiere crear variables de entorno en mayúsculas por convención. Se puede ejemplificar creando una
+            variable que almacene la ruta de una carpeta en Windows en el contexto de WSL. Después de guardar el
+            archivo, reiniciar la terminal y ejecutar el comando, la variable de entorno se utiliza para cambiar al
+            directorio deseado.<br><br>
+
+            Además, se muestra cómo crear un alias que persiste incluso después de cerrar la terminal. Esto puede
+            mejorar la eficiencia al crear alias para tareas frecuentes, como abrir VS Code en una carpeta específica.
+            En resumen, la personalización de variables de entorno y la creación de alias pueden agilizar y facilitar el
+            trabajo en el entorno de Linux.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 14 - Comandos de búsqueda</h3>
+        <p>
+            A veces es necesario localizar y eliminar archivos innecesarios de un mismo tipo que ocupan espacio en el
+            disco duro. Los comandos de búsqueda en la terminal son útiles para esta tarea, y uno de ellos es el comando
+            `find`. Su sintaxis básica es `find [ruta] [opciones]`, y se pueden utilizar diversas opciones para
+            segmentar la búsqueda. <br><br>
+
+            1. <b>Segmentar por nombre (-name):</b>
+            - Utilizando `-name`, se puede buscar archivos por su nombre o extensión en una ruta específica. Por
+            ejemplo:<br>
+            
+            find ./ -name *.png<br><br>
+            
+
+            2. <b>Segmentar por tipo (-type):</b>
+            - Con la opción `-type`, se pueden buscar archivos (-type f), directorios (-type d), o enlaces simbólicos
+            (-type l). Se pueden combinar múltiples opciones separadas por comas. Ejemplo:<br>
+            
+            find ./ -type f -name "f*"<br><br>
+            
+
+            3. <b>Segmentar por tamaño (-size):</b><br><br>
+            - Se puede utilizar la opción `-size` para buscar archivos según su tamaño. Se especifica la unidad de
+            medida (c, k, M, G) y se puede usar el símbolo + para mayor o - para menor. Ejemplos:<br><br>
+            
+            find ./ -size 4k<br>
+            find ./ -size +4k<br>
+            find ./ -size -4k<br><br>
+            
+
+            4. <b>Buscar archivos vacíos (-empty):</b><br><br>
+            - La opción `-empty` se usa para buscar archivos o directorios vacíos. Ejemplo:<br>
+            
+            find ./ -type d -empty<br><br>
+            
+
+            5. <b>Limitar la búsqueda (-maxdepth, -mindepth):</b><br><br>
+            - Se pueden limitar las carpetas a explorar con `-maxdepth` (profundidad máxima) y `-mindepth` (profundidad
+            mínima). Ejemplos:<br>
+            
+            find ./ -type d -maxdepth 2<br>
+            find ./ -type d -mindepth 2<br><br>
+            
+
+            6. <b>Uso de `less` para mejorar la visualización:</b><br><br>
+            - Se recomienda pasar la salida del comando `find` a `less` para facilitar la exploración de resultados:<br>
+            
+            find ./ | less<br><br>
+            
+
+            Estos comandos permiten una búsqueda efectiva y personalizable en la terminal para gestionar y eliminar
+            archivos de manera eficiente.</p>
     </div>
 </body>
 
