@@ -721,8 +721,62 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 18 - Manejo de procesos</h3>
+        <p> La gestión de procesos en la terminal ofrece alternativas al método convencional de ctrl + alt + suprimir.
+            Aquí se detallan algunos comandos clave:
 
+            1. <b>Ver Procesos Activos (ps):</b><br><br>
+            - Utiliza el comando `ps` para mostrar una tabla simple con Process ID (PID) y nombres de procesos.<br>
+            - Proporciona una visión básica de los procesos en ejecución.<br><br>
 
+            2. <b>Ver Procesos Detallados (top):</b><br>
+            - Emplea el comando `top` para obtener una lista detallada de procesos con información sobre consumo de CPU,
+            RAM y usuario.<br>
+            - Permite filtrar por usuario, presionando "u", y ofrece opciones adicionales con la tecla "h".<br>
+            - Se sale de `top` presionando "q".<br><br>
+
+            3. <b>Matar un Proceso (kill):</b><br><br>
+            - Usa el comando `kill` seguido del PID del proceso que deseas terminar.<br>
+            - En entornos como Windows Subsystem for Linux (WSL), la gestión se limita a los procesos asociados con la
+            terminal.<br>
+            - Ejemplo: `kill 595` cierra el proceso correspondiente al PID 595.<br><br>
+
+            Este resumen proporciona métodos para visualizar, detallar y finalizar procesos desde la terminal, brindando
+            un enfoque alternativo al uso de atajos de teclado convencionales en sistemas operativos basados en UNIX.
+        </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Procesos en foreground y background</h3>
+        <p>
+            En esta lección aprendimos a manejar procesos de forma asíncrona en la terminal, comprendiendo la diferencia
+            entre ejecución en foreground y background. Utilizamos el truco del editor de texto simple en la terminal
+            (cat) para ilustrar los conceptos:<br><br>
+
+            1. <b>Ejecución en Background:</b><br><br>
+            - Al utilizar el comando `cat > mi_nota.txt`, ingresamos texto en la terminal.<br>
+            - Suspender el proceso con `CTRL+Z`, moviéndolo al background y mostrando la notificación de suspensión.<br>
+            - Consultar procesos en background con `jobs`.<br><br>
+
+            2. <b>Traer al Foreground:</b><br><br>
+            - Para volver a ejecutar en foreground, utilizamos `fg [número de trabajo]` (o `fg %1` en ZSH).<br>
+            - Continuamos la ejecución y finalizamos con `CTRL+D` para guardar y finalizar el proceso.<br><br>
+
+            3. <b>Otras Formas de Enviar al Background:</b><br><br>
+            - Usamos el operador `&` al final de un comando para enviarlo directamente al background.<br>
+            - Ejemplo: `cat > mi_nota.txt &`.<br>
+            - Utilizamos `bg [número de trabajo]` para enviar un trabajo específico al background.<br>
+            - Ejemplo: `bg 1` para reactivar y mover al background el proceso del navegador Chrome.<br><br>
+
+            4. <b>Aplicaciones Prácticas:</b><br>
+            - Pudimos ejecutar comandos en paralelo, siendo útil en entornos con una sola terminal.<br>
+            - Se aplicó el conocimiento para manejar procesos gráficos, como abrir Google Chrome desde la terminal y
+            moverlo al background.<br><br>
+
+            Este manejo de procesos en foreground y background es valioso para optimizar la ejecución de comandos y
+            tareas en la terminal, especialmente cuando se trabaja con una única terminal y se necesita ejecutar varios
+            procesos simultáneamente.</p>
     </div>
 </body>
 
