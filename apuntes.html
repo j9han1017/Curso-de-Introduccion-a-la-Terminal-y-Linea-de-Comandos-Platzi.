@@ -527,45 +527,45 @@
             1. <b>Segmentar por nombre (-name):</b>
             - Utilizando `-name`, se puede buscar archivos por su nombre o extensión en una ruta específica. Por
             ejemplo:<br>
-            
+
             find ./ -name *.png<br><br>
-            
+
 
             2. <b>Segmentar por tipo (-type):</b>
             - Con la opción `-type`, se pueden buscar archivos (-type f), directorios (-type d), o enlaces simbólicos
             (-type l). Se pueden combinar múltiples opciones separadas por comas. Ejemplo:<br>
-            
+
             find ./ -type f -name "f*"<br><br>
-            
+
 
             3. <b>Segmentar por tamaño (-size):</b><br><br>
             - Se puede utilizar la opción `-size` para buscar archivos según su tamaño. Se especifica la unidad de
             medida (c, k, M, G) y se puede usar el símbolo + para mayor o - para menor. Ejemplos:<br><br>
-            
+
             find ./ -size 4k<br>
             find ./ -size +4k<br>
             find ./ -size -4k<br><br>
-            
+
 
             4. <b>Buscar archivos vacíos (-empty):</b><br><br>
             - La opción `-empty` se usa para buscar archivos o directorios vacíos. Ejemplo:<br>
-            
+
             find ./ -type d -empty<br><br>
-            
+
 
             5. <b>Limitar la búsqueda (-maxdepth, -mindepth):</b><br><br>
             - Se pueden limitar las carpetas a explorar con `-maxdepth` (profundidad máxima) y `-mindepth` (profundidad
             mínima). Ejemplos:<br>
-            
+
             find ./ -type d -maxdepth 2<br>
             find ./ -type d -mindepth 2<br><br>
-            
+
 
             6. <b>Uso de `less` para mejorar la visualización:</b><br><br>
             - Se recomienda pasar la salida del comando `find` a `less` para facilitar la exploración de resultados:<br>
-            
+
             find ./ | less<br><br>
-            
+
 
             Estos comandos permiten una búsqueda efectiva y personalizable en la terminal para gestionar y eliminar
             archivos de manera eficiente.</p>
@@ -574,43 +574,155 @@
         <h3 class="subtitulos">Clase 15 - Usando el comando grep</h3>
         <p>
             <b>Uso del comando `grep` para buscar texto dentro de archivos:</b><br><br>
-            
+
             <b>Significado de "grep":</b><br>
-            - "Grep" proviene de "Global Regular Expression Print" y utiliza expresiones regulares (regex) para realizar búsquedas dentro de archivos.<br><br>
-            
+            - "Grep" proviene de "Global Regular Expression Print" y utiliza expresiones regulares (regex) para realizar
+            búsquedas dentro de archivos.<br><br>
+
             <b>Sintaxis básica:</b><br>
             - La sintaxis general es: `grep [ExpresiónRegular] [archivoDondeBuscar]`.<br><br>
-            
+
             <b>Ejemplo práctico:</b><br>
-            - Si tenemos un archivo llamado "movies.csv", podemos buscar palabras dentro de él con el comando: `grep the movies.csv`.<br><br>
-            
+            - Si tenemos un archivo llamado "movies.csv", podemos buscar palabras dentro de él con el comando: `grep the
+            movies.csv`.<br><br>
+
             <b>Opciones útiles:</b><br><br>
-            
+
             1. <b>Ignorar case sensitive (-i):</b><br>
-               - La opción `-i` permite buscar sin distinguir entre mayúsculas y minúsculas. Ejemplo:<br><br>
-                 
-                 grep -i Action movies.csv<br><br>
-                
-            
+            - La opción `-i` permite buscar sin distinguir entre mayúsculas y minúsculas. Ejemplo:<br><br>
+
+            grep -i Action movies.csv<br><br>
+
+
             2. <b>Contar ocurrencias (-c):</b><br>
-               - Utilizando `-c`, se puede obtener el conteo de cuántas veces aparece una palabra en el archivo. Ejemplo:<br><br>
-                
-                 grep -c Drama movies.csv<br><br>
-                 
-            
+            - Utilizando `-c`, se puede obtener el conteo de cuántas veces aparece una palabra en el archivo.
+            Ejemplo:<br><br>
+
+            grep -c Drama movies.csv<br><br>
+
+
             3. <b>Excluir una expresión (-v):</b><br>
-               - La opción `-v` permite mostrar resultados que NO coincidan con la expresión regular proporcionada. Ejemplo:<br><br>
-                 
-                 grep -cv Drama movies.csv<br><br>
-                
-            
+            - La opción `-v` permite mostrar resultados que NO coincidan con la expresión regular proporcionada.
+            Ejemplo:<br><br>
+
+            grep -cv Drama movies.csv<br><br>
+
+
             4. <b>Limitar la búsqueda (-m):</b><br>
-               - Con `-m` se limita la búsqueda a un número específico de líneas. Ejemplo:<br><br>
-                 
-                 grep -m 10 Fan movies.csv<br><br>
-                 
-            
-            Estas opciones amplían la versatilidad del comando `grep`, facilitando la búsqueda y análisis de información dentro de archivos de texto.</p>
+            - Con `-m` se limita la búsqueda a un número específico de líneas. Ejemplo:<br><br>
+
+            grep -m 10 Fan movies.csv<br><br>
+
+
+            Estas opciones amplían la versatilidad del comando `grep`, facilitando la búsqueda y análisis de información
+            dentro de archivos de texto.
+        </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 16 - Utilidades de red</h3>
+        <p>Se aborda el manejo básico de redes informáticas, centrándose en comandos esenciales para obtener información
+            y realizar algunas acciones comunes: <br><br>
+
+            <b> Configuración de Dispositivos (ifconfig):</b><br><br>
+
+            Se utiliza el comando ifconfig en la consola para obtener información sobre el dispositivo de red (por
+            ejemplo, "eth0"), su configuración, dirección IPv4 e IPv6, y máscara de red.
+            El comando netstat también se menciona como una opción para visualizar la información de red de manera más
+            amigable.<br><br>
+
+            <b>Envío de Solicitudes a una Página (ping):</b><br><br>
+            Se utiliza el comando ping seguido de la URL para verificar la disponibilidad de una página desde la
+            dirección IP.<br>
+            El comando envía paquetes a la página y evalúa el tiempo de respuesta.
+            Se destacan opciones adicionales como limitar la cantidad de paquetes enviados (-c) y especificar el tamaño
+            de los paquetes (-s).<br><br>
+
+            <b> Obtención de Archivos de una Página (curl | wget):</b><br><br>
+            Se emplea el comando curl para obtener información de una página web y mostrarla en la consola.<br>
+            El comando wget realiza una acción similar, pero guarda la información en un archivo especificado.<br>
+            Se menciona la posibilidad de descargar múltiples páginas al mismo tiempo mediante wget.<br><br>
+
+            <b>Ruta de Acceso a la Página (traceroute):</b><br><br>
+            Se introduce el comando traceroute para visualizar la ruta que sigue una conexión a una página en
+            Internet.<br>
+            Se explica que la conexión no se realiza directamente al servidor de la página, sino a través de
+            intermediarios (servidores) en el camino.<br><br>
+            Este resumen proporciona una visión general de cómo utilizar estos comandos para obtener información sobre
+            la red, verificar la disponibilidad de páginas web, obtener archivos de sitios y visualizar la ruta de
+            acceso a una página a través de la red.
+        </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 17 - Comprimiendo archivos tar y zip</h3>
+        <p> <b>Compresión con formato .tar:</b><br><br><br>
+            1. Utilizamos el comando `tar` para comprimir archivos en formato `.tar`.<br>
+            2. La sintaxis básica es `tar -cf [nombreDelArchivoComprimido] [archivoAComprimir]`.<br>
+            3. Para visualizar el progreso de la compresión, se agrega la opción `-v` o `--verbose`.<br>
+            - Ejemplo: `tar -cvf compressed.tar Documents/toCompress/`.<br>
+            4. Para comprimir en formato `.tar.gz` o `.tgz`, se añade la opción `-z`.<br>
+            - Ejemplo: `tar -czvf compressed.tar.gz Documents/toCompress/`.<br>
+            5. La descompresión se realiza con la opción `-x`.<br>
+            - Ejemplo: `tar -xzvf compressed.tar.gz`.<br><br>
+
+            <b>Compresión con formato .zip:</b><br><br>
+            1. Utilizamos el comando `zip` para comprimir archivos en formato `.zip`.<br>
+            2. La sintaxis básica es `zip -r [nombreDelArchivoComprimido] [archivoAComprimir]`.<br>
+            - La opción `-r` es utilizada para comprimir carpetas de forma recursiva.<br>
+            - Ejemplo: `zip -r compressed.zip Documents/toCompress/`.<br>
+            3. La descompresión se realiza con el comando `unzip`.<br>
+            - Ejemplo: `unzip compressed.zip`.<br><br>
+
+            Estos comandos son útiles para comprimir y descomprimir archivos en sistemas operativos basados en UNIX,
+            como Linux. Se pueden emplear para organizar y reducir el tamaño de archivos y carpetas.
+        </p>
+        <p><b>Opciones del Comando tar:</b></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Opción</th>
+                    <th>Función</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>c</td>
+                    <td>Comprimir</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>Descomprimir</td>
+                </tr>
+                <tr>
+                    <td>z</td>
+                    <td>Especifica que lo que se va a comprimir o descomprimir tiene extensión ".tar.gz" o ".tgz"</td>
+                </tr>
+                <tr>
+                    <td>v</td>
+                    <td>Muestra lo que está comprimiendo o descomprimiendo</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Comandos zip y unzip:</b></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Comando</th>
+                    <th>Función</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>zip</td>
+                    <td>Comprimir</td>
+                </tr>
+                <tr>
+                    <td>unzip</td>
+                    <td>Descomprimir</td>
+                </tr>
+            </tbody>
+        </table>
+
+
     </div>
 </body>
 
